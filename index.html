@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+
+  <link rel="stylesheet" href="">
+  <style>
+    .pause {
+        background-color: red;
+    }
+  </style>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="play" data-song-order="0">play0</div>
+    <div class="play" data-song-order="1">play1</div>
+    <progress class="main" value="0"></progress>
+    <div class="time">time</div>
+    <div class="duration">duration</div>
+    <div class="main play">mainplay</div>
+    <div class="song-title">song-title</div>
+    <div class="song-number">song-number</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="jquery.audio.js"></script>
+    <script type="text/javascript">
+    $.audio([
+        {
+            url: "perfect_slubmers.mp3",
+            number: 1,
+            title: "perfect slumber"
+        },
+        {
+            url: "whim.mp3",
+            number: 2,
+            title: "whim"
+        },
+    ]);
+    </script>
+</body>
+</html>
